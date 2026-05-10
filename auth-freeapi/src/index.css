@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import '@fontsource-variable/jetbrains-mono';
+
+
+:root {
+  --text: #71717a;       /* zinc-500 */
+  --text-h: #09090b;     /* zinc-950 */
+  --bg: #ffffff;
+  --border: #d4d4d8;     /* zinc-300 */
+  --code-bg: #f4f4f5;    /* zinc-100 */
+  --accent: #7c3aed;     /* violet-700 — lyra's sharp violet */
+  --accent-bg: rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.4);
+  --social-bg: rgba(244, 244, 245, 0.5); /* zinc-100/50 */
+  --shadow:
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+
+  /* Lyra: monospace everywhere, zero radius */
+  --sans: 'JetBrains Mono Variable', ui-monospace, Consolas, monospace;
+  --heading: 'JetBrains Mono Variable', ui-monospace, Consolas, monospace;
+  --mono: 'JetBrains Mono Variable', ui-monospace, Consolas, monospace;
+
+  /* Lyra: zero border radius */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0px;   /* mono fonts already have inherent rhythm */
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #a1a1aa;       /* zinc-400 */
+    --text-h: #fafafa;     /* zinc-50 */
+    --bg: #09090b;         /* zinc-950 — lyra dark is very dark */
+    --border: #27272a;     /* zinc-800 */
+    --code-bg: #18181b;    /* zinc-900 */
+    --accent: #8b5cf6;     /* violet-500 — slightly lighter for dark bg */
+    --accent-bg: rgba(139, 92, 246, 0.12);
+    --accent-border: rgba(139, 92, 246, 0.4);
+    --social-bg: rgba(39, 39, 42, 0.5); /* zinc-800/50 */
+    --shadow:
+      rgba(0, 0, 0, 0.5) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
