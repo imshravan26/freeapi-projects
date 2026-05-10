@@ -30,14 +30,14 @@ export default function App() {
       <main className="relative pt-10 z-10 w-full max-w-2xl bg-white/5 backdrop-blur-md border border-white/6 rounded-2xl shadow-xl">
         <header className="flex items-start justify-center ">
           <div className="flex justify-center">
-            <h1 className="text-lg text-center font-extrabold tracking-tight">
+            <h1 className="text-2xl text-center font-extrabold tracking-tight">
               Random Joke Machine
             </h1>
           </div>
         </header>
 
         <section className="mt-3 flex flex-col items-center">
-          <div className="min-h-[120px] flex items-center p-3">
+          <div className="min-h-[120px] flex items-center pb-3 pt-1 px-5">
             <p className="text-lg leading-relaxed text-white/90">
               {loading && (
                 <span className="inline-flex items-center gap-3">
